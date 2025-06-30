@@ -1,0 +1,100 @@
+#container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  overflow: hidden;
+  /* background-color: aqua; */
+  background: linear-gradient(45deg, #00f, #fff 20%, #00f 50%, #f0f);
+  padding: 4px;
+}
+
+header img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+nav {
+  width: 500px;
+  float: right;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav li {
+  float: left;
+  padding: 10px;
+  margin-right: 10px;
+  list-style: none;
+}
+
+h1 {
+  padding-left: 10px;
+}
+
+section {
+  float: left;
+  width: 815px;
+}
+
+article {
+  border: 1px solid #ccc;
+  width: 390px;
+  height: 270px;
+  float: left;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+article p {
+  text-align: justify;
+}
+
+aside {
+  width: 180px;
+  float: right;
+  margin-top: 65px;
+  margin-left: 5px;
+}
+
+aside img {
+  width: 100%;
+  height: 185px;
+}
+
+.gradiant {
+  /* background: radial-gradient(circle closest-side at 30% 50%, #ff0, #0f0, rgb(255, 166, 255)); */
+  background: repeating-radial-gradient(circle closest-side at 50% 50%, #fff, #fff 10%, pink 10%, pink 20%);
+}
+
+footer {
+  clear: both;
+  /* background-color: aquamarine; */
+  background: repeating-linear-gradient(90deg, #00f, #00f 5%, #f0f 5%, #f0f 10%);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+.bg {
+  background: url(../img/레드향.jpg) no-repeat center;
+  background-size: cover;
+}
+
+section h1 {
+  background: url(../img/레드향.jpg) no-repeat left center;
+  background-size: 25px 25px;
+  padding-left: 30px;
+}
