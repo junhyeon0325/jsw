@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제</title>
+</head>
+
+<body>
+  <script>
+    // 홀짝게임 (0:짝, 1:홀)
+    let com;  // 컴퓨터가 입력한 난수
+    let me;   // 유저가 입력한 수
+
+    // 0,1 난수 생성 (0:짝, 1홀)
+    
+
+    while (true) {
+      com = Math.floor(Math.random() * 2);
+      me = prompt("0,1중에서 입력");
+      if (me == com) {
+      alert('맞다');
+      break;
+      } else {
+      alert('틀리다');
+      }
+    }
+    // 0,1 중에서 입력
+    
+
+    // 정답 출력 (if~else)
+    
+  </script>
+</body>
+
+</html>

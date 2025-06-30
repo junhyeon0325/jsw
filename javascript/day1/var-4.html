@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상수 사용하기</title>
+</head>
+<body>
+  <script>
+    // 총주문금액 계산하는 프로그램 (주문수량 * 단가 = 총 금액)
+    // 변수선언
+    let order;  // 주문수량
+    let price;  // 단가
+    let total;  // 총 금액
+
+    order = prompt("주문수량 입력해주세요");
+    price = prompt("단가 입력해주세요");
+
+    // 계산
+    total = order * price;
+
+    // 결과
+    console.log("주문수량 : " + order + " ,단가 : " + price + " ,총 금액 : " + total);
+  </script>
+</body>
+</html>

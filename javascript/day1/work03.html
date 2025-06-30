@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let me;
+    let com;
+
+    com = Math.floor(Math.random() * 3) + 1 ;
+    me = prompt("1~3 사이의 값을 입력하시오.");
+
+    if(me == 3 && com == 2 || me == 2 && com == 1 || me == 1 && com == 3){
+      alert("승" + "me : " + me + ", com : " + com);
+    } else if (me == 3 && com == 1 || me == 2 && com == 3 || me == 1 && com == 2){
+      alert("패" + "me : " + me + ", com : " + com);
+    } else{
+      alert("무승부"  + "me : " + me + ", com : " + com);
+    }
+
+  </script>
+</body>
+</html>
