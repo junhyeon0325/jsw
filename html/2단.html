@@ -7,39 +7,61 @@
   <style>
     #container{
       border: 1px solid #ccc;
-      width: 960px;
-      padding: 20px;      
-      margin: 0 auto;
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      justify-content: space-evenly;
     }
 
     header{
+      width: 100%;
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 20px;
     }
-
     section{
+      width: 70%;
+      background-color: aliceblue;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section h2{
+      width: 100%;
+    }
+    aside{
+      width: 20%;
+      background-color: #ccc;
+    }
+    footer{
+      width: 100%;
+    }
+
+    /* section{
       border: 1px solid #ccc;
       width: 620px;
       padding: 20px;
       float: left;
       margin-bottom: 20px;
-    }
+    } */
 
-    aside{
+    /* aside{
       border: 1px solid #ccc;
       width: 220px;
       padding: 20px;
       float: right;
       margin-bottom: 20px;
       background-color: #ccc;
-    }
+    } */
 
-    footer{
+    /* footer{
       border: 1px solid #ccc;
       clear: both;
       padding: 10px;
-    }
+    } */
     #greentext{
       color: green;
     }

@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <script>
     document.write("<table border='1'>");
-    for(let i=0;i<10;i++){      
-      document.write("<tr><td>"+i+"</td></tr>");      
+    for (let i = 0; i < 10; i++) {
+      document.write("<tr><td>" + i + "</td></tr>");
     }
     document.write("</table>");
-  </script>  
+
+    // 1에서 100까지 3의 배수이거나 5의 배수인 수의 갯수 구하기
+    let cnt = "0"; // 객수 저장변수
+    // 1에서 100까지 반복
+    // 3의 배수면 => 갯수 증가
+    // 3의 배수 갯수 출력(콘솔창)
+
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        cnt++;
+      }
+    }
+
+    console.log(`3의 배수이면서 5의 배수인 수의 갯수 : ${cnt}개`)
+
+  </script>
 </body>
+
 </html>

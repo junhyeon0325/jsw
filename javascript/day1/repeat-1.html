@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    div {
+      width: 100pt;
+      background-color: aliceblue;
+      margin: 10px;
+      padding: 30px 20px 30px 40px;
+      float: left;
+    }
+  </style>
 </head>
+
 <body>
+
   <script>
     // for(let i=0; i<=5; i++){
     //   console.log(i,'장준현')
     // }
 
-    let sum = 0;
-    // let num = prompt();
+    // let sum = 0;
+    // // let num = prompt();
 
-    for(let i=1; i<=5; i++){
-      sum += i;
+    // for(let i=1; i<=5; i++){
+    //   sum += i;
+    // }
+    // console.log(sum);
+
+    // 중첩 반복문
+    // 구구단
+    let gugu = "";
+    for(let i = 2; i <= 9; i++){
+      gugu += (`===${i}단=== \n`);
+      for(let j = 1; j <=9; j++){
+        gugu += `${i} * ${j} = ${(i*j)}\n`;
+      }
     }
-    console.log(sum);
+    console.log(gugu);
+
+    // 웹페이지 출력
+    // 1단을 하나의 division 만듬
+    // for (let i = 2; i <= 9; i++) {
+    //   document.write(`<div><h3>==${i}단==</h3>`);
+    //   for (let j = 1; j <= 9; j++) {
+    //     document.write(`${i} X ${j} = ${(i * j)}</br>`);
+    //   }
+    //   document.write('</div>')
+    // }
+
+    // 변수 활용
+    let gugudan = "";
+    for (let i = 2; i <= 5; i++) {
+      gugudan += `<div><h3>==${i}단==</h3>`;
+      for (let j = 1; j <= 9; j++) {
+        gugudan += `${i} X ${j} = ${(i * j)}</br>`;
+      }
+      gugudan += '</div>'
+    }
+    console.log(gugudan);
+    document.write(gugudan);
   </script>
 </body>
+
 </html>

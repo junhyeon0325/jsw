@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도전문제</title>
+</head>
+
+<body>
+  <h1>도전문제</h1>
+  <script>
+    // // 수 입력
+    // let num = prompt("수를 입력하세요");
+
+    // // 입력이 취소 되면 -> 입력 취소 출력
+    // if (num != null) {
+    //   if (num % 2 == 0) {
+    //     // 홀수면 홀수, 짝수면 짝수 출력
+    //     alert(`${num} 짝수`);
+    //   } else {
+    //     alert("홀수");
+    //   }
+    // } else {
+    //   alert("입력취소");
+    // }
+
+
+    // 국어, 영어, 수학 점수 입력 받아서 평균, 평가 출력
+    
+    let grade;
+
+    // 점수 입력 -> 3개 저장
+    let guk = Number(prompt("국어 점수 입력 하세요"));
+    let eng = Number(prompt("영어 점수 입력 하세요"));
+    let math = Number(prompt("수학 점수 입력 하세요"));
+
+    // 평균 = (국어점수 + 영어점수 + 수학점수) / 3
+    let average = parseInt((guk + eng + math) / 3);
+
+    // 평가 => 평균에 따라 수, 우, 미, 양, 가
+    if (average >= 90) {
+      grade = "수";
+    } else if (average >= 80) {
+      grade = "우";
+    } else if (average >= 70) {
+      grade = "미";
+    } else if (average >= 60) {
+      grade = "양";
+    } else {
+      grade = "가";
+    }
+    console.log(`${average}점 -> ${grade}`);
+
+    // switch문 : 조건이 여러개 일때 if문 대신 사용
+    switch(parseInt(average / 10)) {
+      case 10 : 
+      case 9 : grade = '수'; break;
+      case 8 : grade = '우'; break;
+      case 7 : grade = '미'; break;
+      case 6 : grade = '양'; break;
+      default : grade = '가';
+    }
+
+    // 결과 => 콘솔창 출력 91점 -> 수
+    console.log(`${average}점 -> ${grade}`);
+
+    // 평균을 7로 나눈 나머지 => 요일
+    // 0 -> 일요일 ~ 6 -> 토요일
+    // switch 문 사용
+    let week = " "
+
+    switch(average % 7){
+      case 0 : week = '일요일'; break;
+      case 1 : week = '월요일'; break;
+      case 2 : week = '화요일'; break;
+      case 3 : week = '수요일'; break;
+      case 4 : week = '목요일'; break;
+      case 5 : week = '금요일'; break;
+      default : week = '토요일';
+    }
+
+    console.log("나머지 : " + (average % 7) + " -> " + week);
+
+
+    let age = Number(prompt("나이 입력"));
+    age >= 18 ? alert(age + "세 판매 가능!") : alert(age + "세 판매 불가!");
+  </script>
+</body>
+
+</html>
