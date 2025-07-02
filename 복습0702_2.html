@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>성적처리</title>
   <style>
-    table, td, th{
+    table, th, td{
       border: 1px solid #ccc;
       border-collapse: collapse;
     }
-    td, th{    
-      padding: 10px;
+    th, td{
+      padding: 20px;
     }
     th{
-      background-color: aliceblue;
+      background-color: #e4e4e4;
     }
   </style>
 </head>
@@ -28,28 +28,27 @@
       let sum = ko + eng + math;
       // 평균
       let avg = Math.round(sum / 3);
-      // 등급
+      // 등금
       let grade = ""
       if (avg >= 90) {
         grade = "A";
       } else if (avg >= 80) {
-        grade = "B";
+        grade = "B"
       } else if (avg >= 70) {
-        grade = "C";
+        grade = "C"
       } else if (avg >= 60) {
         grade = "D"
       } else {
-        grade = "E"
+        grade = "C"
       }
       // 이름 총점 평균 등급 출력(콘솔 창)
-      console.log(`${name} \t ${sum} \t ${avg} \t ${grade}`);      
+      console.log(`${name} \t ${sum} \t ${avg} \t ${grade}`);
       return `<tr>
           <td>${name}</td>
           <td>${sum}</td>
           <td>${avg}</td>
           <td>${grade}</td>
-        </tr>
-      `      
+        </tr>`
     }
 
     // 필드명 출력(콘솔 창)
@@ -63,13 +62,13 @@
           <th>등급</th>
         </tr>
       </thead>
-      <tbody>`    
+      <tbody>`
 
     // 성적자료 넘김(함수 호출)
-    layout += sungjuk("aaa", 80, 75, 90);
+    layout += sungjuk('aaa', 80, 75, 90);
     layout += sungjuk('bbb', 90, 88, 99);
     layout += sungjuk('ccc', 100, 85, 94);
-    layout += "</tbody></table>"
+    layout += `</tbody></table>`;
 
     document.write(layout);
   </script>
