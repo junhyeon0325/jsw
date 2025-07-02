@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table,
+    td {
+      border: 1px solid white;
+      /* border-collapse: collapse; */
+    }
+
+    td {
+      background-color: #ccc;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h3>반복문</h3>
+  <script>
+    // 별찍기
+
+    for (let i = 1; i <= 5; i++) {
+      let stars = "";
+      for (let j = 1; j <= i; j++) {
+        stars += "*";
+      }
+      console.log(stars);
+    }
+
+    // 별찍기2
+    // 줄수 : 5까지
+    // 빈칸 수 : 5-i
+    // 별 수 : i
+    // let stars = "";
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 1; j <= 5 - i; j++) {
+    //     stars += " ";
+    //   }
+    //   for (let k = 1; k <= i; k++) {
+    //     stars += "*";
+    //   }
+    //   stars += "\n";
+    // }
+    // console.log(stars);
+
+
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5 - i; j++) {
+        stars += " ";
+      }
+      for (let k = 1; k <= (2 * i - 1); k++) {
+        stars += "*";
+      }
+      stars += "\n";
+    }
+    for (let i = 4; i >= 1; i--) {
+      for (let j = 0; j <= 4 - i; j++) {
+        stars += " ";
+      }
+      for (let k = 1; k <= (2 * i - 1); k++) {
+        stars += "*";
+      }
+      stars += "\n";
+    }
+    console.log(stars);
+
+    // 자리배치도
+    // 사람수 : personNum
+    // 한줄 사람수 : colNum
+    // 몇 줄수 : rowNum
+    // 의자번호 : seatNum
+    // 배치도 : layout
+
+    let personNum = Number(prompt("관객수를 입력하시오"));
+    let colNum = Number(prompt("한줄에 앉을 사람 수를 입력하세요"));
+    let rowNum = parseInt(personNum / colNum);
+    // rowNum = personNum % colNum == 0 ? rowNum : ++rowNum;
+    if (personNum % colNum != 0) {
+      rowNum++;
+    }
+    let seatNum = 0;
+    let layout = `<table>
+      <caption> 자리배치도 </cation>`;
+
+
+    for (let i = 1; i <= rowNum; i++) {
+      layout += "<tr>"
+      for (let j = 1; j <= colNum; j++) {
+        seatNum++;
+        layout += `<td>좌석 ${seatNum}</td>`;
+        if (personNum <= seatNum) {
+          break;
+        }
+      }
+      layout += "</tr>"
+    }
+    layout += "</table>"
+
+    document.write(layout);
+
+    // min에서 max 까지 홀수합과 짝수합 구하기
+    let min = Number(prompt("최소값"));
+    let max = Number(prompt("최대값"));
+    let hol = 0;
+    let JJak = 0;
+
+    for (let i = min; i <= max; i++) {
+      if (i % 2 == 0) {
+        JJak += i;
+      } else {
+        hol += i;
+      }
+    }
+
+    console.log("홀 : " + hol + ", 짝 : " + JJak);
+
+  </script>
+</body>
+
+</html>

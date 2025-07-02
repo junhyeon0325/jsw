@@ -32,6 +32,7 @@
     let min_line = parseInt(visitor / line);
     let last_line = visitor % line;
     let lastSeatNo = 0;
+    let seatNo = 0;
 
     if (last_line != 0) {
       min_line++;
@@ -49,7 +50,8 @@
         if(last_line < lastSeatNo) {
           break;
         } else {
-          document.write(`<td> 좌석 ${j} </td>`);
+          seatNo++;
+          document.write(`<td> 좌석 ${seatNo} </td>`);
         }                
       }
       document.write("</tr>");
