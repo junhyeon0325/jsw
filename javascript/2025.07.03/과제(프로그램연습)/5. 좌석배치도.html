@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>좌석배치도</title>
     <style>
-        table{
+        table {
             /* border: 1px solid #ccc; */
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
 
         }
-        td{
+
+        td {
             border: 1px solid #ccc;
             padding: 5px;
         }
     </style>
 </head>
+
 <body>
     <h1>좌석배치도</h1>
     <form name="output">
@@ -30,7 +33,39 @@
     <div id="layout"></div>
 
     <script>
-        
+        let bachib = document.querySelector('#btn');
+        let layouttable = document.querySelector('#layout');
+
+        bachib.addEventListener('click', bachi);
+
+        function bachi() {
+            let personNum = document.querySelector('#person').value;
+            let colNum = document.querySelector('#colNum').value;
+            let rowNum = parseInt(personNum / colNum);
+
+            if (personNum % colNum != 0) {
+                rowNum++;
+            }
+
+            let seatNum = 0;
+            let layout = `<table>
+      <caption> 자리배치도 </cation>`;
+            for (let i = 1; i <= rowNum; i++) {
+                layout += "<tr>"
+                for (let j = 1; j <= colNum; j++) {
+                    seatNum++;
+                    layout += `<td>좌석 : ${seatNum}</td>`;
+                    if (personNum <= seatNum) {
+                        break;
+                    }
+                }
+                layout += "</tr>"
+            }
+            layout += "</table>"
+            layouttable.innerHTML = layout;
+        }
+
     </script>
 </body>
+
 </html>
