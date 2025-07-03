@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <h1>자바</h1>
   <h1>자바스크립트</h1>
@@ -16,6 +18,70 @@
     console.log(subject[1])
     console.log(subject[2])
     console.log(subject[3])
+
+    let score = [90, 100, 40, 100];
+
+    // 배열 순황
+    console.log(score);
+    for (let i = 0; i < score.length; i++) {
+      console.log(`index : ${i} => element ${score[i]}`);
+    }
+    // for in => index
+    for (let idx in score) {
+      console.log(`index : ${idx} => element ${score[idx]}`);
+    }
+    // for of => element(값)
+    for (const ele of score) {
+      console.log(ele);
+    }
+
+    let colors = ['주황', '노랑', '초록'];
+
+    colors.forEach((ele, idx) => {
+      console.log(`index = ${idx}, element = ${ele}`);
+    })
+    colors.forEach((element, index, colors) => {
+      console.log(`index = ${index}, element = ${element}`);
+    })
+
+
+    // 추가
+    console.log(colors);
+    colors.push('파랑');
+    colors.unshift('빨강');
+    colors.pop();
+    colors.pop();
+    colors.shift();
+    colors.splice(1, 0, '초록', '파랑', '남색');
+    colors.splice(4, 1);
+    console.log(colors);
+
+    // 중복체크
+    if (colors.indexOf('보라') == -1) {
+      colors.push('보라');
+      console.log(colors);
+    } else {
+      alert(`중복된 색입니다`);
+    }
+
+    // map() => 기존의 배열의 요소 처리해서 새로운 배열 생성
+    console.log(score);
+    let maparr = score.map((ele) => parseInt(ele * 1.1));
+    console.log(maparr);
+
+    // 조건에 맞는 요소 추출
+    let filterArr = maparr.filter((ele, ind) => ele < 100);
+    console.log(filterArr);
+
+    // 배열의 합
+    let arrhap = score.reduce((pre, curr) => pre + curr);
+    console.log(arrhap);
+
+    // 정렬
+    console.log(colors.sort().reverse());
+    console.log(maparr.sort((a,b) => a-b));
+    console.log(maparr.sort((a,b) => b-a));
   </script>
 </body>
+
 </html>
